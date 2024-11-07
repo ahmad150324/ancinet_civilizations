@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5deb3;
+    padding: 10px 20px;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #8b4513;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.center-nav {
+    display: flex;
+    /* justify-content: center; */
+    /* flex-grow: 1; */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5deb3;
+    color: #8b4513;
+    /* min-width: 150px; */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+    color: #8b4513;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #eee8aa;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input[type="text"] {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px;
+}
+
+.search-container:hover input[type="text"] {
+    display: block;
+}
+
+.search-icon {
+    color: #8b4513;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.center-nav a:hover {
+    background-color: #eeaaaa;
+}
+
+.ticker-container {
+    display: flex;
+    align-items: center;
+    background-color: #003366;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticker-fixed {
+    font-weight: bold;
+    color: #ffcc00;
+    margin-right: 15px;
+}
+
+.ticker-sliding {
+    /* flex: 1; */
+    overflow: hidden;
+    position: relative;
+}
+
+.ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker-slide 15s linear infinite;
+    width: calc(200%);
+}
+
+.ticker-content span {
+    color: #ffffff;
+    font-size: 1em;
+    margin-right: 5em;
+}
+
+.ticker-content a {
+    color: #1a73e8;
+    text-decoration: underline;
+}
+
+@keyframes ticker-slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.ticker-content:hover {
+    animation-play-state: paused;
+}
+
+.feedback-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.feedback-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feedback-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.feedback-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.feedback-form button:hover {
+    background-color: #45a049;
+}
+
+.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    /* flex-wrap: wrap; */
+}
+
+.footer-contact {
+    text-align: left;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    color: #aaa;
+}
+
+.footer-contact a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #fff;
+}
+
+.footer-social a {
+    color: #aaa;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-copyright {
+    margin-top: 10px;
+    color: #888;
+    font-size: 12px;
+}
+
+/* Main of Home Pagee */
+.main-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.welcome-section h1 {
+    font-size: 2.5em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.civilizations-section {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    justify-content: center;
+}
+
+.civilization-card {
+    width: calc(25% - 20px);
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.civilization-card:hover {
+    transform: translateY(-5px);
+}
+
+.civilization-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.civilization-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.civilization-card p {
+    font-size: 1em;
+    color: #666;
+    padding: 0 15px;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin: 15px 0 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Civilizations waly pages */
+.civilization-header {
+    background-color: #8b5e34;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.civilization-header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.civilization-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.civilization-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.civilization-intro p {
+    font-size: 1.2em;
+    color: #555;
+    text-align: center;
+}
+
+.civilization-details {
+    display: flex;
+    gap: 20px;
+}
+
+.civilization-details img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.civilization-description {
+    /* flex: 1; */
+    font-size: 1em;
+    color: #444;
+}
+
+.civilization-description h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.civilization-description p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
+/* about us wala page */
+.about-us-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.about-section .intro-text {
+    font-size: 1.2em;
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.mission-section {
+    margin-bottom: 40px;
+}
+
+.mission-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.mission-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
